@@ -1,0 +1,66 @@
+Certainly! Here are prompts for creating visual representations of text using DALL·E:
+
+1. **Landing Page Header:**
+   - Generate an image with a navy blue header featuring a logo, white navigation tabs, and a dropdown arrow for the "Account" tab.
+   - Ensure the logo contrasts well against the navy background.
+
+2. **Hero Section:**
+   - Create an image with a pale orange background showcasing the text "Empower Your Career Journey" in Deep Orange.
+   - Add a brief description or tagline below the header in a neutral dark gray or black.
+
+3. **Features Section:**
+   - Generate a visual grid layout with minimalistic icons representing each feature.
+   - Include brief descriptions below each icon using a clear font.
+
+4. **Testimonials Section:**
+   - Design an image with a light orange background and incorporate quotation marks or speech bubble graphics.
+   - Include user photos or avatars if possible and add testimonial text in a neutral dark gray or black.
+   - Highlight the name or designation of the person giving the testimonial in Primary Orange.
+
+5. **Footer:**
+   - Create an image with a navy blue background and include links and social media icons in Pale Orange or white for contrast.
+
+6. **Registration/Sign Up Page:**
+   - Design a visual representation of the header with a navy blue background, logo, and form fields for name, email, password, and a Deep Orange "Sign Up" button.
+
+7. **Login Page:**
+   - Generate an image resembling the header from the Landing Page with a navy background.
+   - Include a login form with fields for email, password, and a "Forgot Password" link in Primary Orange.
+
+8. **User Dashboard:**
+   - Design an image with the header as described in the Landing Page, including a user settings dropdown.
+   - Create a visual representation of the user's progress overview using cards or tiles with Poppins headings and Roboto content.
+
+9. **Career Interest Quiz Page:**
+   - Generate an image similar to the Landing Page header.
+   - Design an engaging quiz interface with Poppins for questions and Roboto for options. Highlight selected options in Primary Orange.
+
+10. **Results/Recommendation Page:**
+    - Create an image with the Landing Page header style.
+    - Display results in visual cards or tiles, using Poppins for job titles and Roboto for descriptions. Highlight recommended items in Deep Orange.
+
+11. **Local Resources Page:**
+    - Replicate the Landing Page header design in the image.
+    - Present resources visually in a grid or list format, using Poppins for titles and Roboto for descriptions.
+
+12. **Profile Settings Page:**
+    - Generate an image with the header style from the Landing Page.
+    - Create visual tabs or sections for different profile categories, using Roboto for form labels and input text.
+
+13. **Feedback/Support Page:**
+    - Design an image with the Landing Page header style.
+    - Create visual fields for feedback type and description, maintaining a consistent Roboto font throughout.
+
+14. **About Us/Information Page:**
+    - Implement the Landing Page header style in the image.
+    - Mix text, images, and videos to create an informative visual representation, using Poppins for section headings.
+
+15. **Terms of Service & Privacy Policy Pages:**
+    - Apply the Landing Page header style in the image.
+    - Format the content visually with text sections in Roboto and use Poppins for section headings.
+
+16. **Logout/Confirmation Page:**
+    - Create an image with a centered message confirming logout in Roboto.
+    - Include a link or button in Deep Orange to return to the landing page visually.
+
+These prompts should help you generate visual representations of the text-based UX/UI layouts for your MVP pages using DALL·E.

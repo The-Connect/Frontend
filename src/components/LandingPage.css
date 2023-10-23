@@ -1,0 +1,14 @@
+body{
+    background-color: #003366;
+    font-family: 'Poppins', sans-serif;
+}
+
+fieldset{
+    background-color: white;
+}
+
+.logo {
+    color: white; 
+    font-weight: bold;
+    font-size: 24px;
+}

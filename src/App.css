@@ -1,38 +1,139 @@
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbox{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  height: 5rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+fieldset{
+  margin: 2em auto;
+  width: 30%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow:1px 2px 3px 4px rgba(20,20,20,0.4);
+  min-height: 300px;
+  margin-bottom: 20px;
+}
+
+h2{
+  text-align: center;
+  color: #003366;
+}
+
+
+.label{
+  margin-top: 20px;
+  
+}
+
+form {
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+legend{
+  padding: 1rem 0;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+
+input[type="text"], input[type="number"], input[type="email"], input[type="password"]{
+  border-radius: 5px;
+  border: none;
+  background-color: #FFE4D4;
+  color: black;
+  width: 100%
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #A9A9A9;
+}
+
+select{
+  background-color: #FFE4D4 ;
+  color:black ;
+  border-radius: 5px;
+  border: none;
+}
+
+.submitButton:focus{
+  background-color:#FFD1A1;
+}
+
+.submitButton{
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #FF6B00;
+  min-width: 300px;
+  border-radius: 10px;
+  color: #003366;
+  font-weight: bold;
+  border: none;
+ /* changes background color to grey if it is disabled */
+  &:disabled {
+    background-color: grey;}
+  
+}
+
+sup{
+  color: red;
+  font-weight: bold;
+}
+
+
+
+.orange-link{
+  color: #FF6B00;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #003366;
   color: white;
+  text-align: center;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+  margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
