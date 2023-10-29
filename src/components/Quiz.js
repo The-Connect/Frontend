@@ -65,13 +65,13 @@ export default function Quiz() {
             <div className="question-text">{questions[currentQuestion].questionText}</div>
           </div>
           <div className="answers">
-            {questions[currentQuestion].answerOptions.map((answerOption) => <button onClick={handleButtonClicked}>{answerOption.answerText}</button> )}
+            {questions[currentQuestion].answerOptions.map((answerOption) => <button className="button-answers" onClick={handleButtonClicked}>{answerOption.answerText}</button> )}
           </div>
-          <button onClick={resetButtonClicked}>Reset Quiz</button>
+          <button className="reset-button" onClick={resetButtonClicked}>Reset Quiz</button>
         </div>
         {
-          currentQuestion !== 0 ? <div>
-            <button onClick={goBackButtonClicked}>Go back</button>
+          currentQuestion !== 0 ? <div className="goback-container">
+            <button className="goback-button" onClick={goBackButtonClicked}>Go back</button>
           </div>: null
         }
       </fieldset>
