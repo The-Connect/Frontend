@@ -27,6 +27,7 @@ export default function Quiz() {
     }
   ];
 
+  //when a user clicks an answer
   const handleButtonClicked = () => {
     const nextQuestion = currentQuestion + 1;
     if(nextQuestion < questions.length){
@@ -36,6 +37,19 @@ export default function Quiz() {
       alert('You have reached the end of this quiz.')
     }
     
+  }
+
+  //when a user decides to reset the quiz
+  const resetButtonClicked = () => {
+    setCurrentQuestion(0);
+    setQuestionNumber(0);
+    alert('Quiz reset!');
+  }
+
+  //writing out the logic for when a user wants to go back a question
+  const goBackButtonClicked = () => {
+    setCurrentQuestion(currentQuestion - 1);
+    setQuestionNumber(questionNumber - 1);
   }
 
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -53,7 +67,13 @@ export default function Quiz() {
           <div className="answers">
             {questions[currentQuestion].answerOptions.map((answerOption) => <button onClick={handleButtonClicked}>{answerOption.answerText}</button> )}
           </div>
+          <button onClick={resetButtonClicked}>Reset Quiz</button>
         </div>
+        {
+          currentQuestion !== 0 ? <div>
+            <button onClick={goBackButtonClicked}>Go back</button>
+          </div>: null
+        }
       </fieldset>
       </>
     </div>
