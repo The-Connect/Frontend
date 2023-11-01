@@ -9,72 +9,161 @@ export default function Quiz() {
   //will check where the user is in terms of questions
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
-  //holds arrays of questions 
+  //holds arrays of questions
   const questions = [
     {
-      questionText: "Are you an introvert or an extrovert?",
+      categoryQuestion:'Core Desires:',
+      questionText: "I'm drawn to roles where I can take charge or lead initiatives.",
       answerOptions: [
-        { answerText: "Introvert", answerValue: "introverted" },
-        { answerText: "Extrovert", answerValue: "extroverted" },
+        { answerText: "4 - Strongly Agree", answerValue: "4" },
+        { answerText: "3 - Agree", answerValue: "3" },
+        { answerText: "2 - Slightly Agree", answerValue: "2" },
+        { answerText: "1 - Disagree", answerValue: "1" },
+        { answerText: "0 - Strongly Disagree", answerValue: "0" },
       ],
     },
     {
-      questionText: "Do you like going out in nature or sticking to the city?",
+      categoryQuestion: 'Core Desires:',
+      questionText: "Meeting goals and targets at work gives me a feeling of accomplishment.",
       answerOptions: [
-        {answerText: "Nature", answerValue: "nature"},
-        {answerText: "City", answerValue: "city"}
-      ]
-    }
+        { answerText: "4 - Strongly Agree", answerValue: "4" },
+        { answerText: "3 - Agree", answerValue: "3" },
+        { answerText: "2 - Slightly Agree", answerValue: "2" },
+        { answerText: "1 - Disagree", answerValue: "1" },
+        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+      ],
+    },
+    {
+      categoryQuestion: 'Core Desires:',
+      questionText: "Building professional relationships is vital for my career growth.",
+      answerOptions: [
+        { answerText: "4 - Strongly Agree", answerValue: "4" },
+        { answerText: "3 - Agree", answerValue: "3" },
+        { answerText: "2 - Slightly Agree", answerValue: "2" },
+        { answerText: "1 - Disagree", answerValue: "1" },
+        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+      ],
+    },
+    {
+      categoryQuestion: 'Core Desires:',
+      questionText: "Recognition for my work, whether through feedback or rewards, matters a lot to me.",
+      answerOptions: [
+        { answerText: "4 - Strongly Agree", answerValue: "4" },
+        { answerText: "3 - Agree", answerValue: "3" },
+        { answerText: "2 - Slightly Agree", answerValue: "2" },
+        { answerText: "1 - Disagree", answerValue: "1" },
+        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+      ],
+    },
+    {
+      categoryQuestion: 'Core Desires:',
+      questionText: "A clear job role with set responsibilities is something I prefer.",
+      answerOptions: [
+        { answerText: "4 - Strongly Agree", answerValue: "4" },
+        { answerText: "3 - Agree", answerValue: "3" },
+        { answerText: "2 - Slightly Agree", answerValue: "2" },
+        { answerText: "1 - Disagree", answerValue: "1" },
+        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+      ],
+    },
+    {
+      categoryQuestion: 'Lifestyle Habits:',
+      questionText: "I'm open to roles that might involve unconventional hours or remote work.",
+      answerOptions: [
+        { answerText: "4 - Strongly Agree", answerValue: "4" },
+        { answerText: "3 - Agree", answerValue: "3" },
+        { answerText: "2 - Slightly Agree", answerValue: "2" },
+        { answerText: "1 - Disagree", answerValue: "1" },
+        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+      ],
+    },
   ];
 
   //when a user clicks an answer
   const handleButtonClicked = () => {
     const nextQuestion = currentQuestion + 1;
-    if(nextQuestion < questions.length){
+    if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
-      setQuestionNumber(questionNumber + 1)
+      setQuestionNumber(questionNumber + 1);
     } else {
-      alert('You have reached the end of this quiz.')
+      alert("You have reached the end of this quiz.");
     }
-    
-  }
+  };
 
   //when a user decides to reset the quiz
   const resetButtonClicked = () => {
     setCurrentQuestion(0);
     setQuestionNumber(0);
-    alert('Quiz reset!');
-  }
+    alert("Quiz reset!");
+  };
 
   //writing out the logic for when a user wants to go back a question
   const goBackButtonClicked = () => {
     setCurrentQuestion(currentQuestion - 1);
     setQuestionNumber(questionNumber - 1);
-  }
+  };
 
   const [questionNumber, setQuestionNumber] = useState(0);
 
   return (
     <div className="quiz-container">
       <h1>Take the quiz to find your connections</h1>
-      <>
-      <fieldset>
-        <div className="question-container">
-          <div className="question-counter">
-            <span>Question {questionNumber + 1}/</span>{questions.length}
-            <div className="question-text">{questions[currentQuestion].questionText}</div>
-          </div>
-          <div className="answers">
-            {questions[currentQuestion].answerOptions.map((answerOption) => <button className="button-answers" onClick={handleButtonClicked}>{answerOption.answerText}</button> )}
-          </div>
-          <button className="reset-button" onClick={resetButtonClicked}>Reset Quiz</button>
+      <h4>Quiz for jobseekers(Ages 16-45) Discovering Your Ideal Career Fit</h4>
+      <div className="instructions">
+        <p><b>
+          In order to better identify your primary objectives and interests,
+          we've compiled a brief assessment to connect you with the options that
+          best suit your desired results.</b>
+        </p>
+        <ul>Answer Key:</ul>
+        <div className="key">
+        
+        <li>4 = Strongly Agree</li>
+        <li>3 = Agree</li>
+        <li>2 = Slightly Agree</li>
+        <li>1 = Disagree</li>
+        <li>0 = Strongly Disagree</li>
         </div>
-        {
-          currentQuestion !== 0 ? <div className="goback-container">
-            <button className="goback-button" onClick={goBackButtonClicked}>Go back</button>
-          </div>: null
-        }
-      </fieldset>
+      </div>
+      <>
+        <fieldset>
+          <div className="question-container">
+            <div className="question-counter">
+              <span>Question {questionNumber + 1}/</span>
+              {questions.length}
+              
+              <br/> 
+              <div className="question-text">
+                <div className="category-question-container">{questions[currentQuestion].categoryQuestion}</div>
+    
+                <br/>
+                {questions[currentQuestion].questionText}
+              </div>
+            </div>
+            <div className="answers">
+              {questions[currentQuestion].answerOptions.map((answerOption) => (
+                <button
+                  className="button-answers"
+                  onClick={handleButtonClicked}
+                >
+                  {answerOption.answerText}
+                </button>
+              ))}
+            </div>
+            <div className="options-container">
+              <button className="reset-button" onClick={resetButtonClicked}>
+                Reset Quiz
+              </button>
+            </div>
+            {currentQuestion !== 0 ? (
+              <div className="goback-container">
+                <button className="goback-button" onClick={goBackButtonClicked}>
+                  Go back
+                </button>
+              </div>
+            ) : null}
+          </div>
+        </fieldset>
       </>
     </div>
   );
