@@ -12,79 +12,158 @@ export default function Quiz() {
   //holds arrays of questions
   const questions = [
     {
-      categoryQuestion:'Core Desires:',
-      questionText: "I'm drawn to roles where I can take charge or lead initiatives.",
+      categoryQuestion: "Core Desires:",
+      questionText:
+        "I'm drawn to roles where I can take charge or lead initiatives.",
       answerOptions: [
-        { answerText: "4 - Strongly Agree", answerValue: "4" },
-        { answerText: "3 - Agree", answerValue: "3" },
-        { answerText: "2 - Slightly Agree", answerValue: "2" },
-        { answerText: "1 - Disagree", answerValue: "1" },
-        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+        {
+          answerText: "4 - Strongly Agree",
+          answerValue: 4,
+          answerPicked: false,
+        },
+        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        {
+          answerText: "2 - Slightly Agree",
+          answerValue: 2,
+          answerPicked: false,
+        },
+        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        {
+          answerText: "0 - Strongly Disagree",
+          answerValue: 0,
+          answerPicked: false,
+        },
       ],
     },
     {
-      categoryQuestion: 'Core Desires:',
-      questionText: "Meeting goals and targets at work gives me a feeling of accomplishment.",
+      categoryQuestion: "Core Desires:",
+      questionText:
+        "Meeting goals and targets at work gives me a feeling of accomplishment.",
       answerOptions: [
-        { answerText: "4 - Strongly Agree", answerValue: "4" },
-        { answerText: "3 - Agree", answerValue: "3" },
-        { answerText: "2 - Slightly Agree", answerValue: "2" },
-        { answerText: "1 - Disagree", answerValue: "1" },
-        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+        {
+          answerText: "4 - Strongly Agree",
+          answerValue: 4,
+          answerPicked: false,
+        },
+        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        { answerText: "2 - Slightly Agree", answerValue: 2 },
+        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        {
+          answerText: "0 - Strongly Disagree",
+          answerValue: 0,
+          answerPicked: false,
+        },
       ],
     },
     {
-      categoryQuestion: 'Core Desires:',
-      questionText: "Building professional relationships is vital for my career growth.",
+      categoryQuestion: "Core Desires:",
+      questionText:
+        "Building professional relationships is vital for my career growth.",
       answerOptions: [
-        { answerText: "4 - Strongly Agree", answerValue: "4" },
-        { answerText: "3 - Agree", answerValue: "3" },
-        { answerText: "2 - Slightly Agree", answerValue: "2" },
-        { answerText: "1 - Disagree", answerValue: "1" },
-        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+        {
+          answerText: "4 - Strongly Agree",
+          answerValue: 4,
+          answerPicked: false,
+        },
+        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        {
+          answerText: "2 - Slightly Agree",
+          answerValue: 2,
+          answerPicked: false,
+        },
+        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        {
+          answerText: "0 - Strongly Disagree",
+          answerValue: 0,
+          answerPicked: false,
+        },
       ],
     },
     {
-      categoryQuestion: 'Core Desires:',
-      questionText: "Recognition for my work, whether through feedback or rewards, matters a lot to me.",
+      categoryQuestion: "Core Desires:",
+      questionText:
+        "Recognition for my work, whether through feedback or rewards, matters a lot to me.",
       answerOptions: [
-        { answerText: "4 - Strongly Agree", answerValue: "4" },
-        { answerText: "3 - Agree", answerValue: "3" },
-        { answerText: "2 - Slightly Agree", answerValue: "2" },
-        { answerText: "1 - Disagree", answerValue: "1" },
-        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+        {
+          answerText: "4 - Strongly Agree",
+          answerValue: 4,
+          answerPicked: false,
+        },
+        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        {
+          answerText: "2 - Slightly Agree",
+          answerValue: 2,
+          answerPicked: false,
+        },
+        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        {
+          answerText: "0 - Strongly Disagree",
+          answerValue: 0,
+          answerPicked: false,
+        },
       ],
     },
     {
-      categoryQuestion: 'Core Desires:',
-      questionText: "A clear job role with set responsibilities is something I prefer.",
+      categoryQuestion: "Core Desires:",
+      questionText:
+        "A clear job role with set responsibilities is something I prefer.",
       answerOptions: [
-        { answerText: "4 - Strongly Agree", answerValue: "4" },
-        { answerText: "3 - Agree", answerValue: "3" },
-        { answerText: "2 - Slightly Agree", answerValue: "2" },
-        { answerText: "1 - Disagree", answerValue: "1" },
-        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+        {
+          answerText: "4 - Strongly Agree",
+          answerValue: 4,
+          answerPicked: false,
+        },
+        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        {
+          answerText: "2 - Slightly Agree",
+          answerValue: 2,
+          answerPicked: false,
+        },
+        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        {
+          answerText: "0 - Strongly Disagree",
+          answerValue: 0,
+          answerPicked: false,
+        },
       ],
     },
     {
-      categoryQuestion: 'Lifestyle Habits:',
-      questionText: "I'm open to roles that might involve unconventional hours or remote work.",
+      categoryQuestion: "Lifestyle Habits:",
+      questionText:
+        "I'm open to roles that might involve unconventional hours or remote work.",
       answerOptions: [
-        { answerText: "4 - Strongly Agree", answerValue: "4" },
-        { answerText: "3 - Agree", answerValue: "3" },
-        { answerText: "2 - Slightly Agree", answerValue: "2" },
-        { answerText: "1 - Disagree", answerValue: "1" },
-        { answerText: "0 - Strongly Disagree", answerValue: "0" },
+        {
+          answerText: "4 - Strongly Agree",
+          answerValue: 4,
+          answerPicked: false,
+        },
+        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        {
+          answerText: "2 - Slightly Agree",
+          answerValue: 2,
+          answerPicked: false,
+        },
+        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        {
+          answerText: "0 - Strongly Disagree",
+          answerValue: 0,
+          answerPicked: false,
+        },
       ],
     },
   ];
 
-  //when a user clicks an answer
-  const handleButtonClicked = () => {
+  //when a user clicks an answer. This should also trigger one answerPicked to become true
+  const handleButtonClicked = (answerValue) => {
     const nextQuestion = currentQuestion + 1;
+    const updatedQuestions = [...questions];
+    updatedQuestions[currentQuestion].answerOptions.forEach((option) => {
+      option.answerPicked = option.answerValue === answerValue;
+    });
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
       setQuestionNumber(questionNumber + 1);
+      setAnswerPicked(true)
     } else {
       alert("You have reached the end of this quiz.");
     }
@@ -110,19 +189,20 @@ export default function Quiz() {
       <h1>Take the quiz to find your connections</h1>
       <h4>Quiz for jobseekers(Ages 16-45) Discovering Your Ideal Career Fit</h4>
       <div className="instructions">
-        <p><b>
-          In order to better identify your primary objectives and interests,
-          we've compiled a brief assessment to connect you with the options that
-          best suit your desired results.</b>
+        <p>
+          <b>
+            In order to better identify your primary objectives and interests,
+            we've compiled a brief assessment to connect you with the options
+            that best suit your desired results.
+          </b>
         </p>
         <ul>Answer Key:</ul>
         <div className="key">
-        
-        <li>4 = Strongly Agree</li>
-        <li>3 = Agree</li>
-        <li>2 = Slightly Agree</li>
-        <li>1 = Disagree</li>
-        <li>0 = Strongly Disagree</li>
+          <li>4 = Strongly Agree</li>
+          <li>3 = Agree</li>
+          <li>2 = Slightly Agree</li>
+          <li>1 = Disagree</li>
+          <li>0 = Strongly Disagree</li>
         </div>
       </div>
       <>
@@ -131,12 +211,14 @@ export default function Quiz() {
             <div className="question-counter">
               <span>Question {questionNumber + 1}/</span>
               {questions.length}
-              
-              <br/> 
+
+              <br />
               <div className="question-text">
-                <div className="category-question-container">{questions[currentQuestion].categoryQuestion}</div>
-    
-                <br/>
+                <div className="category-question-container">
+                  {questions[currentQuestion].categoryQuestion}
+                </div>
+
+                <br />
                 {questions[currentQuestion].questionText}
               </div>
             </div>
