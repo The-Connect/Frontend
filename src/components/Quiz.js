@@ -20,18 +20,29 @@ export default function Quiz() {
           answerText: "4 - Strongly Agree",
           answerValue: 4,
           answerPicked: false,
+          answerId: 1,
         },
-        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        { 
+          answerText: "3 - Agree", 
+          answerValue: 3, 
+          answerPicked: false },
         {
           answerText: "2 - Slightly Agree",
           answerValue: 2,
           answerPicked: false,
+          answerId: 2,
         },
-        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        {
+          answerText: "1 - Disagree",
+          answerValue: 1,
+          answerPicked: false,
+          answerId: 3,
+        },
         {
           answerText: "0 - Strongly Disagree",
           answerValue: 0,
           answerPicked: false,
+          answerId: 4,
         },
       ],
     },
@@ -44,14 +55,30 @@ export default function Quiz() {
           answerText: "4 - Strongly Agree",
           answerValue: 4,
           answerPicked: false,
+          answerId: 5,
         },
-        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
-        { answerText: "2 - Slightly Agree", answerValue: 2 },
-        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        { 
+          answerText: "3 - Agree", 
+          answerValue: 3, 
+          answerPicked: false, 
+          answerId: 6,
+        },
+        { 
+          answerText: "2 - Slightly Agree", 
+          answerValue: 2, answerId: 7, 
+          answerPicked: false
+        },
+        { 
+          answerText: "1 - Disagree", 
+          answerValue: 1, 
+          answerPicked: false, 
+          answerId: 8,
+        },
         {
           answerText: "0 - Strongly Disagree",
           answerValue: 0,
           answerPicked: false,
+          questionId: 9,
         },
       ],
     },
@@ -64,18 +91,29 @@ export default function Quiz() {
           answerText: "4 - Strongly Agree",
           answerValue: 4,
           answerPicked: false,
+          questionId: 10,
         },
-        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        { 
+          answerText: "3 - Agree", 
+          answerValue: 3, 
+          answerPicked: false,
+          questionId: 11, },
         {
           answerText: "2 - Slightly Agree",
           answerValue: 2,
           answerPicked: false,
+          questionId: 12,
         },
-        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        { 
+          answerText: "1 - Disagree", 
+          answerValue: 1, 
+          answerPicked: false,
+          questionId: 13, },
         {
           answerText: "0 - Strongly Disagree",
           answerValue: 0,
           answerPicked: false,
+          questionId: 14,
         },
       ],
     },
@@ -88,18 +126,30 @@ export default function Quiz() {
           answerText: "4 - Strongly Agree",
           answerValue: 4,
           answerPicked: false,
+          questionId: 15,
         },
-        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        { 
+          answerText: "3 - Agree", 
+          answerValue: 3, 
+          answerPicked: false,
+          questionId: 16, },
         {
           answerText: "2 - Slightly Agree",
           answerValue: 2,
           answerPicked: false,
+          questionId: 17,
         },
-        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        { 
+          answerText: "1 - Disagree", 
+          answerValue: 1, 
+          answerPicked: false,
+          questionId: 18, 
+        },
         {
           answerText: "0 - Strongly Disagree",
           answerValue: 0,
           answerPicked: false,
+          questionId: 19,
         },
       ],
     },
@@ -112,18 +162,30 @@ export default function Quiz() {
           answerText: "4 - Strongly Agree",
           answerValue: 4,
           answerPicked: false,
+          questionId: 20,
         },
-        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        { 
+          answerText: "3 - Agree", 
+          answerValue: 3, 
+          answerPicked: false,
+          questionId: 21, 
+        },
         {
           answerText: "2 - Slightly Agree",
           answerValue: 2,
           answerPicked: false,
+          questionId: 22,
         },
-        { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
+        { 
+          answerText: "1 - Disagree", 
+          answerValue: 1, 
+          answerPicked: false,
+          questionId: 23, },
         {
           answerText: "0 - Strongly Disagree",
           answerValue: 0,
           answerPicked: false,
+          questionId: 24,
         },
       ],
     },
@@ -136,18 +198,26 @@ export default function Quiz() {
           answerText: "4 - Strongly Agree",
           answerValue: 4,
           answerPicked: false,
+          questionId: 25,
         },
-        { answerText: "3 - Agree", answerValue: 3, answerPicked: false },
+        { 
+          answerText: "3 - Agree", 
+          answerValue: 3, 
+          answerPicked: false,
+          questionId: 26,
+        },
         {
           answerText: "2 - Slightly Agree",
           answerValue: 2,
           answerPicked: false,
+          questionId: 27,
         },
         { answerText: "1 - Disagree", answerValue: 1, answerPicked: false },
         {
           answerText: "0 - Strongly Disagree",
           answerValue: 0,
           answerPicked: false,
+          questionId: 28,
         },
       ],
     },
@@ -159,11 +229,15 @@ export default function Quiz() {
     const updatedQuestions = [...questions];
     updatedQuestions[currentQuestion].answerOptions.forEach((option) => {
       option.answerPicked = option.answerValue === answerValue;
+      //updatedQuestions variable is a shallow copy of the questions array
+      //updatedQuestions has currentQuestion passed through it and then accesses the answerOption. For each option(parameter) a function is passed: your answerpicked option is assigned to your option.answerValue, and then it will check if your answerValue is strictly equal to your option.answerValue
     });
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
       setQuestionNumber(questionNumber + 1);
-      setAnswerPicked(true)
+      setAnswerPicked(true);
+      console.log("Button Click received");
+      console.log(questions);
     } else {
       alert("You have reached the end of this quiz.");
     }
