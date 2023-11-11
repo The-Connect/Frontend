@@ -1,232 +1,90 @@
-import React from "react";
 import { useState } from "react";
 import "./Quiz.css";
 
 export default function Quiz() {
-  //answerPicked will be set to false initially so that users cannot move on to the next question without selecting an answer. Once they have selected answer, answerPicked will be set to true
+  // answerPicked will be set to false initially so that users cannot move on to 
+  // the next question without selecting an answer. Once they have 
+  // selected answer, answerPicked will be set to true
   const [answerPicked, setAnswerPicked] = useState(false);
 
   //will check where the user is in terms of questions
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
-  //holds arrays of questions
-  const questions = [
-    {
-      categoryQuestion: "Core Desires:",
-      questionText:
-        "I'm drawn to roles where I can take charge or lead initiatives.",
-      answerOptions: [
-        {
-          answerText: "4 - Strongly Agree",
-          answerValue: 4,
-          answerPicked: false,
-          answerId: 1,
-        },
-        { 
-          answerText: "3 - Agree", 
-          answerValue: 3, 
-          answerPicked: false },
-        {
-          answerText: "2 - Slightly Agree",
-          answerValue: 2,
-          answerPicked: false,
-          answerId: 2,
-        },
-        {
-          answerText: "1 - Disagree",
-          answerValue: 1,
-          answerPicked: false,
-          answerId: 3,
-        },
-        {
-          answerText: "0 - Strongly Disagree",
-          answerValue: 0,
-          answerPicked: false,
-          answerId: 4,
-        },
-      ],
-    },
-    {
-      categoryQuestion: "Core Desires:",
-      questionText:
-        "Meeting goals and targets at work gives me a feeling of accomplishment.",
-      answerOptions: [
-        {
-          answerText: "4 - Strongly Agree",
-          answerValue: 4,
-          answerPicked: false,
-          answerId: 5,
-        },
-        { 
-          answerText: "3 - Agree", 
-          answerValue: 3, 
-          answerPicked: false, 
-          answerId: 6,
-        },
-        { 
-          answerText: "2 - Slightly Agree", 
-          answerValue: 2, answerId: 7, 
-          answerPicked: false
-        },
-        { 
-          answerText: "1 - Disagree", 
-          answerValue: 1, 
-          answerPicked: false, 
-          answerId: 8,
-        },
-        {
-          answerText: "0 - Strongly Disagree",
-          answerValue: 0,
-          answerPicked: false,
-          questionId: 9,
-        },
-      ],
-    },
-    {
-      categoryQuestion: "Core Desires:",
-      questionText:
-        "Building professional relationships is vital for my career growth.",
-      answerOptions: [
-        {
-          answerText: "4 - Strongly Agree",
-          answerValue: 4,
-          answerPicked: false,
-          questionId: 10,
-        },
-        { 
-          answerText: "3 - Agree", 
-          answerValue: 3, 
-          answerPicked: false,
-          questionId: 11, },
-        {
-          answerText: "2 - Slightly Agree",
-          answerValue: 2,
-          answerPicked: false,
-          questionId: 12,
-        },
-        { 
-          answerText: "1 - Disagree", 
-          answerValue: 1, 
-          answerPicked: false,
-          questionId: 13, },
-        {
-          answerText: "0 - Strongly Disagree",
-          answerValue: 0,
-          answerPicked: false,
-          questionId: 14,
-        },
-      ],
-    },
-    {
-      categoryQuestion: "Core Desires:",
-      questionText:
-        "Recognition for my work, whether through feedback or rewards, matters a lot to me.",
-      answerOptions: [
-        {
-          answerText: "4 - Strongly Agree",
-          answerValue: 4,
-          answerPicked: false,
-          questionId: 15,
-        },
-        { 
-          answerText: "3 - Agree", 
-          answerValue: 3, 
-          answerPicked: false,
-          questionId: 16, },
-        {
-          answerText: "2 - Slightly Agree",
-          answerValue: 2,
-          answerPicked: false,
-          questionId: 17,
-        },
-        { 
-          answerText: "1 - Disagree", 
-          answerValue: 1, 
-          answerPicked: false,
-          questionId: 18, 
-        },
-        {
-          answerText: "0 - Strongly Disagree",
-          answerValue: 0,
-          answerPicked: false,
-          questionId: 19,
-        },
-      ],
-    },
-    {
-      categoryQuestion: "Core Desires:",
-      questionText:
-        "A clear job role with set responsibilities is something I prefer.",
-      answerOptions: [
-        {
-          answerText: "4 - Strongly Agree",
-          answerValue: 4,
-          answerPicked: false,
-          questionId: 20,
-        },
-        { 
-          answerText: "3 - Agree", 
-          answerValue: 3, 
-          answerPicked: false,
-          questionId: 21, 
-        },
-        {
-          answerText: "2 - Slightly Agree",
-          answerValue: 2,
-          answerPicked: false,
-          questionId: 22,
-        },
-        { 
-          answerText: "1 - Disagree", 
-          answerValue: 1, 
-          answerPicked: false,
-          questionId: 23, },
-        {
-          answerText: "0 - Strongly Disagree",
-          answerValue: 0,
-          answerPicked: false,
-          questionId: 24,
-        },
-      ],
-    },
-    {
-      categoryQuestion: "Lifestyle Habits:",
-      questionText:
-        "I'm open to roles that might involve unconventional hours or remote work.",
-      answerOptions: [
-        {
-          answerText: "4 - Strongly Agree",
-          answerValue: 4,
-          answerPicked: false,
-          questionId: 25,
-        },
-        { 
-          answerText: "3 - Agree", 
-          answerValue: 3, 
-          answerPicked: false,
-          questionId: 26,
-        },
-        {
-          answerText: "2 - Slightly Agree",
-          answerValue: 2,
-          answerPicked: false,
-          questionId: 27,
-        },
-        { 
-          answerText: "1 - Disagree", 
-          answerValue: 1, 
-          answerPicked: false,
-          questionId: 28,
-         },
-        {
-          answerText: "0 - Strongly Disagree",
-          answerValue: 0,
-          answerPicked: false,
-          questionId: 29,
-        },
-      ],
-    },
-  ];
+  const buildQuestion = (category, text, answerIds) => ({
+    categoryQuestion: category,
+    questionText: text,
+    answerOptions: [
+      {
+        answerText: "4 - Strongly Agree",
+        answerValue: 4,
+        answerPicked: false,
+        answerId: answerIds[0],
+      },
+      { 
+        answerText: "3 - Agree", 
+        answerValue: 3, 
+        answerPicked: false, 
+        answerId: answerIds[1]
+      },
+      {
+        answerText: "2 - Slightly Agree",
+        answerValue: 2,
+        answerPicked: false,
+        answerId: answerIds[2]
+
+      },
+      {
+        answerText: "1 - Disagree",
+        answerValue: 1,
+        answerPicked: false,
+        answerId: answerIds[3]
+      },
+      {
+        answerText: "0 - Strongly Disagree",
+        answerValue: 0,
+        answerPicked: false,
+        answerId: answerIds[4]
+      },
+    ]
+  })
+//   console.log(buildQuestion(
+//     "Core Diaries", 
+//   "I'm drawn to roles where I can take charge or lead initiatives."
+//   ,[1,2,3,4])
+// )
+  
+const questions = [
+  buildQuestion(
+    "Core Diaries",
+    "I'm drawn to roles where I can take charge or lead initiatives.",
+    [1, 2, 3, 4, 5]
+  ),
+  buildQuestion(
+    "Core Diaries",
+    "Meeting goals and targets at work gives me a feeling of accomplishment.",
+    [5, 6, 7, 8, 9]
+  ),
+  buildQuestion(
+    "Core Desires:",
+    "Building professional relationships is vital for my career growth.",
+    [10, 11, 12, 13,14]
+  ),
+  buildQuestion(
+    "Core Desires:",
+    "Recognition for my work, whether through feedback or rewards, matters a lot to me.",
+    [15, 16, 17, 18, 19]
+  ),
+  buildQuestion(
+    "Core Desires:",
+    "A clear job role with set responsibilities is something I prefer.",
+    [20, 21, 22, 23, 24]
+  ),
+  buildQuestion(
+    "Lifestyle Habits:",
+    "I'm open to roles that might involve unconventional hours or remote work.",
+    [25, 26, 27, 28, 29]
+  )
+];
 
   //when a user clicks an answer. This should also trigger one answerPicked to become true
   const handleButtonClicked = (answerValue) => {
@@ -235,7 +93,11 @@ export default function Quiz() {
     updatedQuestions[currentQuestion].answerOptions.forEach((option) => {
       option.answerPicked = option.answerValue === answerValue;
       //updatedQuestions variable is a shallow copy of the questions array
-      //updatedQuestions has currentQuestion passed through it and then accesses the answerOption. For each option(parameter) a function is passed: your answerpicked option is assigned to your option.answerValue, and then it will check if your answerValue is strictly equal to your option.answerValue
+      //updatedQuestions has currentQuestion passed through it and then accesses 
+      // the answerOption. For each option(parameter) 
+      // a function is passed: your answerpicked option is assigned to your 
+      // option.answerValue, and then it will check if your answerValue is 
+      // strictly equal to your option.answerValue
     });
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
@@ -262,6 +124,7 @@ export default function Quiz() {
   };
 
   const [questionNumber, setQuestionNumber] = useState(0);
+
 
   return (
     <div className="quiz-container">
