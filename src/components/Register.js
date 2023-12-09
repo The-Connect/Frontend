@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { Form } from "react-router-dom";
-import connectLogo from "../assets/logo.png"
 
 
 export default function Register() {
@@ -182,7 +179,6 @@ export default function Register() {
           </div>
         </fieldset>
       </form>
-      
     </div>
   );
 }

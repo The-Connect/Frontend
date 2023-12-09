@@ -49,13 +49,11 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-      
       </main>
       
       <div className='footer-container'>
         <Footer/>
       </div>
-      
     </div>
   );
 }

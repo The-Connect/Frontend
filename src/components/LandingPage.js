@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
 import goalx from "../assets/goalx.png"
+import Footer from './Footer';
 
 const LandingPage = () => {
   // URL for the background image
@@ -25,6 +26,7 @@ const LandingPage = () => {
           <Link to="/quiz" className="get-started-button">Get started</Link>
         </section>
       </main>
+      <Footer/>
     </div>
   );
 }

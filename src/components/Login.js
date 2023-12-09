@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import Footer from './Footer'
 
 
 export default function Login(props) {
    
 
   return (
-    <div>
+    <div className='login-container'>
         <form>
             <fieldset>
                 <h2>Login</h2>
