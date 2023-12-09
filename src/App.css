@@ -1,6 +1,17 @@
-.App {
-  width: 100vw;
-  height: 100vh;
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  /* Additional styling for main content */
 }
 
 body{
@@ -12,6 +23,7 @@ body{
   justify-content: space-between;
   height: 5rem;
   align-items: center;
+  background-color: grey;
 }
 
 fieldset{

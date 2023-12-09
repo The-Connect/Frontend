@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, BrowserRouter } from 'react-router-dom'
-import connectLogo from "../assets/logo.png"
 
 function Navbar() {
   return (

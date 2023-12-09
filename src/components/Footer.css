@@ -1,0 +1,41 @@
+.footer-logo {
+    width: 15rem;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .vertical-line {
+    border-right: 2px solid white;
+    height: 8em;
+    margin-left: 1em;
+  }
+  
+  .footer-container {
+    background-color: #003366; /* Remove the white background */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 1em; /* Add padding to the left for space */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .social-text {
+    margin-left: 1em;
+    color: white;
+    font-size: 1em;
+  }
+  
+  .facebook-icon, .instaIcon, .googleIcon, .youtubeIcon {
+    margin-top: 1em;
+    width: 14%;
+    margin-right: 1em;
+  }
+
+  
+ 

@@ -1,14 +1,99 @@
-body{
-    background-color: #003366;
-    font-family: 'Poppins', sans-serif;
-}
-
-fieldset{
-    background-color: white;
-}
-
-.logo {
-    color: white; 
-    font-weight: bold;
-    font-size: 24px;
-}
+/* Reset any browser-default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall widths */
+  }
+  
+  /* Style for the main landing container */
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh; /* Full view height */
+    background-image: url("https://img.freepik.com/free-photo/young-student-working-on-assignment_23-2149257182.jpg?w=900&t=st=1702066798~exp=1702067398~hmac=0b84186d43d0b955fde08b6e73d20fec364c93fc7929e648e7b7001c2d6403f5");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Style for the header section */
+  .landing-header {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 52, 102, 0.8); /* Semi-transparent blue background */
+    position: relative; /* If you want the header to be on top of the background image */
+    z-index: 1; /* Ensures the header is above the main content */
+  }
+  
+  /* Style for the content inside the header */
+  .header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  
+  /* Style for the login and sign up buttons */
+  .login-button,
+  .signup-button, .quiz-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF6B00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover,
+  .signup-button:hover {
+    background-color: #e65a00;
+  }
+  
+  /* Style for the main content area */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 149px); /* Subtract the height of the header */
+    color: white;
+    text-align: center;
+    padding: 0 2rem;
+    margin-top: 5%;
+    border-radius: 50px;
+  }
+  
+  /* Style for the 'Get Started' button */
+  .get-started-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF6B00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .get-started-button:hover {
+    background-color: #e65a00;
+  }
+  
+  /* Font styling example */
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .goalxlogo{
+    width: 7em ;
+  }

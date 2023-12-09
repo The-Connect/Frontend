@@ -1,40 +1,34 @@
-
-import './App.css';
-import { BrowserRouter, Routes, Route, Router, Link, NavLink } from 'react-router-dom';
-import Login from './components/Login';
-import Register from './components/Register';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import { useState } from 'react';
-import logo from "./assets/logo.png"
-import Footer from './components/Footer';
+import React, { useState } from 'react';
+import { Routes, Route, NavLink, Link } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import Quiz from './components/Quiz';
+import Register from './components/Register';
+import Login from './components/Login';
+import Footer from './components/Footer';
+import './App.css';
+import Navbar from './components/Navbar';
 
-
-//styling for link
+// Styling for link
 const linkStyle = {
   margin: '2rem',
   textDecoration: 'none',
   color: 'white',
   fontWeight: 'bold',
-}
+};
 
 
 
 function App() {
-  //this controls whether the popup screen will appear
   const [active, setActive] = useState(false);
 
-  // a function that will toggle the popup based on if setActive is NOT active
   function togglePopup() {
     setActive(!active);
   }
   return (
     <div className="App">
-      {/* <Navbar/> */}
+      <main>
       <div className="navbox">
-        <img src={logo} alt="connect-logo" className='logo'/>
+        {/* <Navbar/> */}
         <NavLink style={linkStyle} to="/" element={LandingPage}>
           Home
         </NavLink>
@@ -51,20 +45,18 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path='quiz' element={<Quiz/>}/>
+        <Route path="/quiz" element={<Quiz/>}/>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-      
       </Routes>
       
+      </main>
       
       <div className='footer-container'>
         <Footer/>
       </div>
       
-      
     </div>
-    
   );
 }
 
