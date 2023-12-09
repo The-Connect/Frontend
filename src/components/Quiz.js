@@ -85,6 +85,29 @@ export default function Quiz() {
       "I'm open to roles that might involve unconventional hours or remote work.",
       [25, 26, 27, 28, 29]
     ),
+    buildQuestion(
+      "Lifestyle Habits:",
+      "I feel more productive when I'm part of a physical team setting.",
+      [30, 31, 32, 33, 34]
+    ),
+    buildQuestion(
+      "Lifestyle Habits:",
+      "Commuting is something I consider when looking for a job.",
+      [35, 36, 37, 38, 39]
+    ),
+    buildQuestion(
+      "Lifestyle Habits:",
+      "Work like balance is essential for my well-being.",
+      [40, 41, 42, 43, 44]
+    ),
+    buildQuestion(
+      "Mindset:",
+      "I'm always looking for opportunities to learn and grow in my career.",
+      [45, 46, 47, 48, 49]
+    ),
+    
+    
+    
   ];
 
   //when a user clicks an answer. This should also trigger one answerPicked to become true

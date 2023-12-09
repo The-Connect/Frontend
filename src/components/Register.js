@@ -59,7 +59,7 @@ export default function Register() {
   }
 
   return (
-    <div>
+    <div className="register-container">
       <form onSubmit={handleSubmit}>
         <fieldset>
             {/* <img src={connectLogo} alt="connect-logo" className="logo"/> */}
