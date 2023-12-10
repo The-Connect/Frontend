@@ -15,10 +15,13 @@ function Footer() {
         <div className='social-text'>
           Connect with us
           <div className='social-imgs'>
-            <img src={facebookIcon} alt="facebook-icon" className='facebook-icon'/>
-            <img src={instaIcon} className='instaIcon' alt="instaIcon"/>
-            <img src={googleIcon} className='googleIcon' alt="googleIcon"/>
-            <img src={youtubeIcon} className='youtubeIcon' alt="youtube"/>
+            <a href="https://www.facebook.com/">
+              <img src={facebookIcon} alt="facebook-icon" className='facebook-icon'/>
+              </a>
+            <a href='https://www.instagram.com/'>
+              <img src={instaIcon} className='instaIcon' alt="instaIcon"/></a>
+            <a href='https://www.google.com/?gl=us&hl=en&pws=0&gws_rd=cr'><img src={googleIcon} className='googleIcon' alt="googleIcon"/></a>
+            <a href='https://www.youtube.com/'><img src={youtubeIcon} className='youtubeIcon' alt="youtube"/></a>
           </div>
         </div>
         {/* <div className='footer-text'>
